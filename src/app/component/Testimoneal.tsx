@@ -1,20 +1,6 @@
-'use client'
-import Image from 'next/image'
+
 import React, { useState } from 'react'
-import bgcr from '../../../puplic/portfolio/app-2.jpg'
-
-
-
-
 const Testimoneal = () => {
-    const [isMove, setisMove] = useState(false);
-    const move = () => {
-        setisMove(!isMove);
-    }
-    const [isMoveleft, setisMoveleft] = useState(false);
-    const moveleft = () => {
-        setisMove(!isMove);
-    }
     return (
         <div className='container testimoneal'>
             <section className="bg-white relative">
