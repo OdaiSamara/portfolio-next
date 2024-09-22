@@ -2,26 +2,384 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+.container{
+    padding-left: 340px;  
+}
+.prog-100{
+    width: 100%;
+}
+.prog-90{
+    width: 90%;
+}
+.prog-75{
+    width: 75%;
+}
+.prog-80{
+    width: 80%;
+}
+.prog-55{
+    width: 55%;
+}
+.typeone{
+    position: relative;
+}
+.typetext::before{
+content: "";
+position: absolute;
+top: 0;
+left: 35%; ;
+width: 100%;
+height: 100%;
+
+background-color: #082f49;
+border-left: 2px solid white;
+animation: write 4s steps(10) infinite;
+
+}
+@keyframes write {
+    40%,60%{
+        left: 85%;
+    }
+    100%{
+        left: 35%;
+    }
+}
+
+.animated:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.animated{
+  transition: 1s;
+    animation: jackInTheBox 4s;
+}
+
+@keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.1) rotate(30deg);
+      transform: scale(0.1) rotate(30deg);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+  
+    50% {
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+    }
+  
+    70% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
   }
+
+
+  #about{
+   
+    animation:backInLeft 4s ;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes backInLeft {
+    0% {
+      -webkit-transform: translateX(-2000px) scale(0.7);
+      transform: translateX(-2000px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    80% {
+      -webkit-transform: translateX(0px) scale(0.7);
+      transform: translateX(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
   }
+
+  .card{
+    transition: 1s;
+  }
+  .card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+ 
+@media (max-width:768px) {
+#about{
+  margin-top: -40px;
+  margin-left: -40%;
+
+  text-align: center;
+}
+#about h2{
+  
+  width: 200px;
+}
+.about-p{
+  padding: 0;
+  width: 200px;
+  margin-top: 20px;
+ 
+
+}
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 40px;
+  margin-left: 150%;
+}
+.about-section svg{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin-left: 10px;
+}
+.about-section h5{
+  font-size: 16px;
+  width: 200px;
+  margin-left: 30px;
+  text-align: center;
+}
+.about-section p{
+  font-size: 16px;
+  width: 200px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+
+.about-tabel{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+  text-align: center;
+
+}
+.about-tabel strong{
+   margin-left: 10px;
+}
+.about-email{
+  font-size: 14px;
+}
+.stats{
+  margin-top: -13px;
+  margin-left: -180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.states-p{
+  padding: 0;
+  width: 200px;
+}
+#Skills{
+  margin-top: -13px;
+  margin-left: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#Skills h2{
+  width: 200px;
+  
+}
+#Skills p{
+  padding: 0;
+  width: 200px;
+  margin-top: 20px;
+}
+.skills-progress{
+  margin-left: 0px;
+
+ 
+}
+.skills-protwo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.skills-width{
+  width: 200px;
+  text-align: center;
+}
+#Resume{
+  margin-top: 20px;
+  margin-left: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#Resume h2{
+  width: 200px;
+}
+#Resume p{
+  width: 200px;
+
+}
+.resume-flexCol{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin-left: 40px;
+  text-align: center;
+
+}
+.resume-flexColtwo{
+        width: 200px;
+        margin-left: -32px;
+        text-align: center;
+}
+#Portfolio{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -13px;
+  margin-left: -100px;
+  text-align: center;
+}
+#Portfolio h2{
+  width: 200px;
+}
+#Portfolio p{
+  width: 200px;
+  
+}
+.portfolio-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin-left: 30px;
+  text-align: center;
+}
+.portfolio-gap{
+  gap: 0;
+}
+.portfolio-padding{
+  padding-left: 0px;
+  padding-right: 10px;
+}
+#service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: -80px;
+  text-align: center;
+}
+#service h2,p{
+  width: 200px;
+}
+#service .card{
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -92px;
+}
+.testimoneal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+  margin-left: -90px;
+  text-align: center;
+}
+.testimoneal button{
+visibility: hidden;
+}
+.test-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+.test-width{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  text-align: center;
+  margin-left: -16px;
+}
+.test-start{
+  margin-left: -48px;
+}
+#contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: -80px;
+  text-align: center;
+}
+#contact h2,p{
+  width: 200px;
+  text-align: center;
+}
+
+.contact-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.con-width{
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -20px;
+
+}
+.con-maps{
+width:100%;
+}
+.side-social{
+  gap: 2px;
+}
+.side-svg{
+  width: 40px;
+  height: 40px;
+}
+
 }
