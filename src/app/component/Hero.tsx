@@ -9,7 +9,7 @@ const Hero = () => {
                     <h1 className="text-3xl  font-extrabold text-white sm:text-5xl">
                         Odai Samara
                     </h1>
-                    <p className="lg:typeone mt-4 text-white font-semibold sm:text-3xl/relaxed">
+                    <p className="typeone mt-4 text-white font-semibold sm:text-3xl/relaxed">
                         I'am <span className='typetext '>Front-End</span>
                     </p>
                 </div>
