@@ -25,7 +25,9 @@
 .prog-55{
     width: 55%;
 }
-.typeone{
+
+@media (min-width:920px) {
+  .typeone{
     position: relative;
 }
 .typetext::before{
@@ -48,6 +50,7 @@ animation: write 4s steps(10) infinite;
     100%{
         left: 35%;
     }
+}
 }
 
 .animated:hover{
