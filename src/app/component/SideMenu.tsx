@@ -1,9 +1,6 @@
 "use client"
 import Link from 'next/link'
 import React, { useState } from 'react'
-import About from './About';
-
-
 export default function SideMenu() {
     const [isdropdown, setisDropdown] = useState(false);
     const list = () => {
