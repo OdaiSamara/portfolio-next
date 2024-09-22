@@ -1,20 +1,8 @@
 "use client"
-import Image from 'next/image'
 import React from 'react'
-import background from "../../../puplic/hero-bg.jpg"
-
 const Hero = () => {
-
-
-
     return (
-
-
-
-
         <div className='relative '>
-
-            {/* <Image src={background} width={1920} height={1000} alt="test" className="absolute  -z-50 w-full min-h-screen  lg:min-h-screen -top-20 left-0 " /> */}
             <div className='bg-sky-950  absolute -top-20  left-0 -z-55  w-full h-full '></div>
 
             <div
