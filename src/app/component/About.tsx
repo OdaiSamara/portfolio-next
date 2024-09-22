@@ -1,3 +1,4 @@
+@typescript-eslint/no-unused-vars
 import Image from 'next/image'
 import React from 'react'
 import card from '../../../puplic/bg.jpg'
